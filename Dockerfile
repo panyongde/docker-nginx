@@ -3,13 +3,10 @@ FROM nginx:alpine
 MAINTAINER Yongde Pan <panyongde@gmail.com>
 
 #时区设置===========================
-# Install root filesystem
-ADD ./rootfs /
 
 # Install base packages
 RUN apk update && apk add curl bash tree tzdata \
-    && cp -r -f /usr/share/zoneinfo/Hongkong /etc/localtime \
-    && echo -ne "Alpine Linux 3.5 image. (`uname -rsv`)\n" >> /root/.built
+    && cp -r -f /usr/share/zoneinfo/Hongkong /etc/localtime
 #----------------------------------
 
 ADD nginx.conf /etc/nginx/
