@@ -6,7 +6,7 @@ MAINTAINER Yongde Pan <panyongde@gmail.com>
 
 # Install base packages
 RUN apk update && apk add curl bash tree tzdata \
-    && cp -r -f /usr/share/zoneinfo/Hongkong /etc/localtime
+    && cp -r -f /usr/share/zoneinfo/Shanghai /etc/localtime
 #----------------------------------
 
 ADD nginx.conf /etc/nginx/
