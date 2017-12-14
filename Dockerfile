@@ -10,7 +10,7 @@ RUN apk update && apk add curl bash tree tzdata \
 #----------------------------------
 
 ADD nginx.conf /etc/nginx/
-ADD ./sites/default.conf /etc/nginx/sites-available
+ADD ./sites/default.conf /etc/nginx/sites-available/
 
 ARG PHP_UPSTREAM_CONTAINER=php-fpm
 ARG PHP_UPSTREAM_PORT=9000
