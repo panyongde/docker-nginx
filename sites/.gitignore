@@ -1,3 +1,2 @@
 *.conf
 !default.conf
-!swoole.conf
